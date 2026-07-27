@@ -1,0 +1,8 @@
+import cbor2
+from binascii import unhexlify
+
+datum_hex = "d8799fd8799fd8799f581c079dc606e76130623c0f7ef9a852d4dbc4ac21fbfad6f2185d4b2adbffd8799fd8799fd8799f581c17ea75ddd53ff526fe001bfdbc6477bd824bdfc476ce5d43d09a1beaffffffff581ce945774156be9fbd49686d0b79a9c7478f1dc2b08e150fabc9f50bd945456d6d6178582430313966613335322d343463612d373230382d386631322d3532356237303634646135370a0cff"
+
+datum_bytes = unhexlify(datum_hex)
+decoded = cbor2.loads(datum_bytes)
+print(decoded)
